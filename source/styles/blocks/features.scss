@@ -1,0 +1,24 @@
+.features__wrapper {
+  width: 320px;
+  margin: auto;
+  padding: 50px 20px 60px;
+  text-align: center;
+}
+
+.features__subtitle {
+  margin-bottom: 4px;
+}
+
+.features__title {
+  margin-bottom: 36px;
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 0;
+  width: 280px;
+  list-style: none;
+}
+

@@ -1,0 +1,52 @@
+.navigation__logo {
+  display: block;
+  width: 32px;
+  height: 36px;
+}
+
+.navigation__list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation__list--user {
+  display: block;
+}
+
+.navigation__toggle {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: $base-white-color;
+  border: none;
+  cursor: pointer;
+}
+
+.navigation__toggle > .hamburger,
+.navigation__toggle > .hamburger::before,
+.navigation__toggle > .hamburger::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 2px;
+  background-color: $base-black-color;
+  transition: all 0.2s;
+}
+
+.navigation__toggle > .hamburger::before {
+  content: "";
+  top: 6px;
+  left: 0;
+}
+
+.navigation__toggle > .hamburger::after {
+  content: "";
+  top: 12px;
+  left: 0;
+}
