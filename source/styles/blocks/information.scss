@@ -1,0 +1,45 @@
+.information__wrapper {
+  padding: 20px;
+}
+
+.information__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primaty-color;
+}
+
+.information__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.information__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: $base-black-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.information__address {
+  margin: 0;
+  margin-bottom: 16px;
+  padding-left: 19px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.information__phone {
+  margin: 0;
+  padding-left: 19px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-black-color;
+  text-decoration: none;
+}
