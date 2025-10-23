@@ -1,0 +1,64 @@
+.toggle {
+  position: relative;
+  display: block;
+  padding-left: 52px;
+  cursor: pointer;
+}
+
+.toggle__checkbox {
+  position: absolute;
+  inset: 0 238px 0 0;
+  background-color: $base-grey-color;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.toggle__checkbox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: 2px;
+  background-color: $base-white-color;
+  transition: 0.4s;
+}
+
+.toggle__checkbox.toggle__checkbox--round {
+  border-radius: 80px;
+}
+
+.toggle__checkbox.toggle__checkbox--round::before {
+  border-radius: 50%;
+}
+
+.toggle__input:hover + .toggle__checkbox,
+.toggle__input:focus-visible + .toggle__checkbox {
+  background-color: rgba(120, 89, 207, 0.25);
+  box-shadow: inset 0 0 0 2px $primary-lighter-color;
+}
+
+.toggle__input:checked + .toggle__checkbox {
+  background-color: $base-primaty-color;
+}
+
+.toggle__input:checked + .toggle__checkbox::before {
+  transform: translateX(18px);
+}
+
+.toggle__input:disabled + .toggle__checkbox {
+  background-color: $light-grey-color;
+  box-shadow: inset 0 0 0 0;
+  cursor: default;
+}
+
+.toggle__input:disabled + .toggle__checkbox::before {
+  background-color: $base-white-color;
+}
+
+.toggle__input:disabled + .toggle__checkbox + .toggle__label {
+  color: $base-grey-color;
+  cursor: default;
+}
+

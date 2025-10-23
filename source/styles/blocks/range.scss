@@ -5,3 +5,103 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+.range__scale {
+  position: relative;
+  margin-bottom: 34px;
+  width: 280px;
+  height: 2px;
+  background-color: $light-grey-color;
+}
+
+.range__bar {
+  position: absolute;
+  height: 4px;
+  background-color: $primary-lighter-color;
+}
+
+.range__toggle {
+  position: absolute;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white-color;
+  border: 2px solid $primary-lighter-color;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+
+.range__toggle:hover::after,
+.range__toggle:focus-visible::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: $base-primaty-color;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.range__toggle:active::after {
+  background-color: $base-primaty-color;
+  opacity: 1;
+}
+
+.range__toggle--min {
+  left: -10px;
+}
+
+.range__toggle--max {
+  right: 0;
+}
+
+.range__value-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 280px;
+}
+
+.range__value-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey-color;
+  transform: translateX(-50%);
+}
+
+.range__input {
+  padding: 8px 10px;
+  width: 118px;
+  height: 40px;
+  font-family: inherit;
+  font-size: 16px;
+  background-color: $base-white-color;
+  border: 2px solid $primary-lighter-color;
+  border-radius: 4px;
+  text-align: center;
+  outline: none;
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.range__input:focus-visible {
+  border: 2px solid $base-primaty-color;
+}
+
+.range__input:disabled {
+  color: $base-grey-color;
+  border: 2px solid $light-grey-color;
+}

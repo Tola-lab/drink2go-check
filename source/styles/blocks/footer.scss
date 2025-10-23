@@ -9,6 +9,10 @@
   height: 36px;
 }
 
+.footer__logo:hover {
+  opacity: 0.8;
+}
+
 .footer__social {
   border-bottom: 1px solid $base-secondary-color;
 }
@@ -30,13 +34,26 @@
 }
 
 .footer__copyright {
+  position: relative;
   display: block;
+  padding-left: 55px;
   margin-top: 20px;
   font-size: 12px;
   line-height: 16px;
   color: $base-grey-color;
   text-decoration: none;
-  text-align: center;
+}
+
+.footer__copyright::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 57px;
+  width: 12px;
+  height: 16px;
+  mask-image: url("../../icons/html-icon.svg");
+  background-color: $base-grey-color;
 }
 
 .footer__copyright:hover {
@@ -45,4 +62,8 @@
 
 .footer__copyright:active {
   color: $primary-darker-color;
+}
+
+.footer__copyright:hover::after {
+  background-color: $base-primaty-color;
 }

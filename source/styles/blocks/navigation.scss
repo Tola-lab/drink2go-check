@@ -1,7 +1,10 @@
 .navigation__logo {
   display: block;
-  width: 32px;
-  height: 36px;
+  padding: 12px 20px;
+}
+
+.navigation__logo:hover {
+  opacity: 0.8;
 }
 
 .navigation__list {
@@ -12,17 +15,43 @@
 }
 
 .navigation__list--user {
+  display: flex;
+  margin-left: auto;
+}
+
+.navigation__list--user .navigation__link {
   display: block;
+  width: 60px;
+  height: 60px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation__list--user .navigation__link:active {
+  background-color: $base-secondary-color;
+}
+
+.navigation__list--user .navigation__link--user {
+  background-image: url("../../icons/user-icon.svg");
+}
+
+.navigation__list--user .navigation__link--basket {
+  background-image: url("../../icons/basket-icon.svg");
 }
 
 .navigation__toggle {
   position: relative;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 60px;
+  height: 60px;
   background-color: $base-white-color;
   border: none;
   cursor: pointer;
+}
+
+.navigation__toggle:active {
+  background-color: $base-secondary-color;
 }
 
 .navigation__toggle > .hamburger,
@@ -31,8 +60,8 @@
   content: "";
   position: absolute;
   display: block;
-  top: 0;
-  right: 0;
+  top: 22px;
+  right: 22px;
   width: 16px;
   height: 2px;
   background-color: $base-black-color;

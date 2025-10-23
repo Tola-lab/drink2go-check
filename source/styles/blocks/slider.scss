@@ -4,16 +4,58 @@
 
 .slider__img {
   margin: auto;
-  margin-bottom: 10px;
 }
 
 .slider__button {
   position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__button:hover,
+.slider__button:focus-visible {
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider__button:active {
+  background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+}
+
+.slider__button::after {
+  content: "";
+  display: block;
+  position: absolute;
   top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../icons/stroke-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  transform: translateY(-50%);
+}
+
+.slider-button-prev::after {
+  transform: rotate(180deg) translateY(50%);
 }
 
 .slider-button-next {
   right: 0;
+}
+
+.slider-button-next:hover,
+.slider-button-next:focus-visible {
+  background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.slider-button-next:active {
+  background: linear-gradient(270deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
 }
 
 .slider__text-wrapper {

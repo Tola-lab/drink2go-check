@@ -25,7 +25,17 @@
   text-decoration: none;
 }
 
+.information__link:hover,
+.information__link:focus-visible {
+  color: $primary-lighter-color;
+}
+
+.information__link:active {
+  color: $primary-darker-color;
+}
+
 .information__address {
+  position: relative;
   margin: 0;
   margin-bottom: 16px;
   padding-left: 19px;
@@ -35,6 +45,7 @@
 }
 
 .information__phone {
+  position: relative;
   margin: 0;
   padding-left: 19px;
   font-style: normal;
@@ -42,4 +53,30 @@
   line-height: 20px;
   color: $base-black-color;
   text-decoration: none;
+}
+
+.information__address::after,
+.information__phone::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 0;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../icons/address-icon.svg");
+}
+
+.information__phone::after {
+  top: 0;
+  background-image: url("../../icons/phone-icon.svg");
+}
+
+.information__phone:hover,
+.information__phone:focus-visible {
+  color: $primary-lighter-color;
+}
+
+.information__phone:active {
+  color: $primary-darker-color;
 }
