@@ -17,5 +17,27 @@
   display: block;
   width: 40px;
   height: 40px;
+  mask-size: 20px 20px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: $base-grey-color;
   cursor: pointer;
+}
+
+.social__link--vk {
+  mask-image: url("../../icons/vk-icon.svg");
+}
+
+.social__link--pinterest {
+  mask-image: url("../../icons/pinterest-icon.svg");
+}
+
+.social__link--ok {
+  mask-image: url("../../icons/ok-icon.svg");
+}
+
+.social__link:hover,
+.social__link:active,
+.social__link:focus-visible {
+  background-color: $base-primaty-color;
 }

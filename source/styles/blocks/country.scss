@@ -10,3 +10,12 @@
   padding: 0;
   list-style: none;
 }
+
+.country__label {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.country__item:not(:last-child) {
+  margin-bottom: 20px;
+}

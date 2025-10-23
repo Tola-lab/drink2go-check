@@ -34,12 +34,12 @@
       </ul>
       <ul class="navigation__list navigation__list--user">
         <li class="navigation__item">
-          <a class="navigation__link" href="#">
+          <a class="navigation__link navigation__link--user" href="#">
             <span class="visually-hidden">Личный кабинет</span>
           </a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link" href="#">
+          <a class="navigation__link navigation__link--basket" href="#">
             <span class="visually-hidden">Корзина</span>
           </a>
         </li>
@@ -93,19 +93,19 @@
         <p class="features__subtitle subtitle">Преимущества</p>
         <h2 class="features__title title">Главные причины выбрать Drink2Go</h2>
         <ul class="features__list feature">
-          <li class="feature__item">
+          <li class="feature__item feature__item--speed">
             <h3 class="feature__title">Скорость</h3>
             <p class="feature__description">Готовый напиток всегда под рукой — просто открой банку</p>
           </li>
-          <li class="feature__item">
+          <li class="feature__item feature__item--fit">
             <h3 class="feature__title">Удобство</h3>
             <p class="feature__description">Легко помещается и в карман, и в маленькую сумочку</p>
           </li>
-          <li class="feature__item">
+          <li class="feature__item feature__item--energy">
             <h3 class="feature__title">Бодрость</h3>
             <p class="feature__description">Сбалансированная доза кофеина даст мощный заряд энергии</p>
           </li>
-          <li class="feature__item">
+          <li class="feature__item feature__item--ecology">
             <h3 class="feature__title">Экологичность</h3>
             <p class="feature__description">Вся упаковка сделана из перерабатываемых материалов</p>
           </li>
@@ -123,7 +123,7 @@
             <legend class="range__title">Цена</legend>
             <div class="range__wrapper">
               <div class="range__scale">
-                <div class="range__bar" style="left: 10px; width: 208px">
+                <div class="range__bar" style="left: 10px; width: 240px">
                   <button class="range__toggle range__toggle--min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену</span>
                   </button>
@@ -135,7 +135,7 @@
             </div>
             <div class="range__value-wrapper">
               <label class="range__label">
-                <input class="range__input" type="number" value="0" name="min-price" required>
+                <input class="range__input" type="number" name="min-price" placeholder="0" required>
               </label>
               <label class="range__label">
                 <input class="range__input" type="number" value="900" name="max-price" required>
@@ -148,28 +148,28 @@
             <ul class="available__list">
               <li class="available__item">
                 <label class="available__label control">
-                  <input class="control__input" type="radio" name="type" value="no matter" checked>
+                  <input class="visually-hidden control__input" type="radio" name="type" value="no matter" checked>
                   <span class="control__mark"></span>
                   <span class="control__label">Неважно</span>
                 </label>
               </li>
               <li class="available__item">
                 <label class="available__label control">
-                  <input class="control__input" type="radio" name="type" value="animal">
+                  <input class="visually-hidden control__input" type="radio" name="type" value="animal">
                   <span class="control__mark"></span>
                   <span class="control__label">Только животное</span>
                 </label>
               </li>
               <li class="available__item">
                 <label class="available__label control">
-                  <input class="control__input" type="radio" name="type" value="plant">
+                  <input class="visually-hidden control__input" type="radio" name="type" value="plant">
                   <span class="control__mark"></span>
                   <span class="control__label">Только растительное</span>
                 </label>
               </li>
               <li class="available__item">
                 <label class="available__label control">
-                  <input class="control__input" type="radio" name="type" value="no milk" disabled>
+                  <input class="visually-hidden control__input" type="radio" name="type" value="no milk" disabled>
                   <span class="control__mark"></span>
                   <span class="control__label">Без молока</span>
                 </label>
@@ -182,32 +182,36 @@
             <ul class="country__list">
               <li class="country__item">
                 <label class="country__label toggle">
-                  <input class="toggle__input" type="checkbox" name="Brazil" checked>Бразилия
+                  <input class="visually-hidden toggle__input" type="checkbox" name="Brazil" checked>Бразилия
                   <span class="toggle__checkbox toggle__checkbox--round"></span>
                 </label>
               </li>
               <li class="country__item">
                 <label class="country__label toggle">
-                  <input class="toggle__input" type="checkbox" name="Ethiopia">Эфиопия
+                  <input class="visually-hidden toggle__input" type="checkbox" name="Ethiopia">
                   <span class="toggle__checkbox toggle__checkbox--round"></span>
+                  <span class="toggle__label">Эфиопия</span>
                 </label>
               </li>
               <li class="country__item">
                 <label class="country__label toggle">
-                  <input class="toggle__input" type="checkbox" name="Colombia">Колумбия
+                  <input class="visually-hidden toggle__input" type="checkbox" name="Colombia">
                   <span class="toggle__checkbox toggle__checkbox--round"></span>
+                  <span class="toggle__label">Колумбия</span>
                 </label>
               </li>
               <li class="country__item">
                 <label class="country__label toggle">
-                  <input class="toggle__input" type="checkbox" name="Costa Rica">Коста-Рика
+                  <input class="visually-hidden toggle__input" type="checkbox" name="Costa Rica">
                   <span class="toggle__checkbox toggle__checkbox--round"></span>
+                  <span class="toggle__label">Коста-Рика</span>
                 </label>
               </li>
               <li class="country__item">
                 <label class="country__label toggle">
-                  <input class="toggle__input" type="checkbox" name="Peru" disabled>Перу
+                  <input class="visually-hidden toggle__input" type="checkbox" name="Peru" disabled>
                   <span class="toggle__checkbox toggle__checkbox--round"></span>
+                  <span class="toggle__label">Перу</span>
                 </label>
               </li>
             </ul>
@@ -325,7 +329,7 @@
 
         <ul class="catalog__pagination pagination">
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
+            <a class="pagination__link pagination__link--prev" href="#">
               <span class="visually-hidden">Назад</span>
             </a>
           </li>
@@ -339,7 +343,7 @@
             <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
+            <a class="pagination__link pagination__link--next" href="#">
               <span class="visually-hidden">Вперед</span>
             </a>
           </li>
@@ -367,17 +371,17 @@
         </a>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--vk" href="#">
               <span class="visually-hidden">ВК</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--pinterest" href="#">
               <span class="visually-hidden">Пинтерест</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="#">
+            <a class="social__link social__link--ok" href="#">
               <span class="visually-hidden">Одноклассники</span>
             </a>
           </li>

@@ -1,0 +1,57 @@
+.control {
+  position: relative;
+  display: block;
+  padding-left: 34px;
+  cursor: pointer;
+}
+
+.control__mark {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white-color;
+  border: 2px solid $base-grey-color;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.control__input:hover + .control__mark,
+.control__input:focus + .control__mark {
+  border-color: $base-primaty-color;
+}
+
+.control__input[type="radio"]:checked + .control__mark {
+  border: 2px solid $base-primaty-color;
+}
+
+.control__input[type="radio"]:checked + .control__mark::after,
+.control__input:hover + .control__mark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: $base-primaty-color;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.control__input:hover + .control__mark::after {
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.control__input[type="radio"]:disabled + .control__mark {
+  border: 2px solid $light-grey-color;
+  background-color: #f8f8f8;
+  cursor: default;
+}
+
+.control__input[type="radio"]:disabled + .control__mark + .control__label {
+  color: $base-grey-color;
+  cursor: default;
+}
+

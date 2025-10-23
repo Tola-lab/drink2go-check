@@ -28,6 +28,13 @@
   background-color: $base-white-color;
 }
 
-.filter__button--cancel:hover {
+.filter__button--cancel:hover,
+.filter__button--cancel:focus-visible {
   color: $base-white-color;
+}
+
+.filter__button--cancel:disabled {
+  background-color: $light-grey-color;
+  color: $base-white-color;
+  cursor: default;
 }
