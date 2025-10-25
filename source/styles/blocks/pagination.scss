@@ -73,3 +73,35 @@
   color: $base-black-color;
   background-color: inherit;
 }
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    justify-content: flex-end;
+    margin-top: 70px;
+  }
+
+  .pagination__link::after {
+    content: none;
+  }
+
+  .pagination__link .visually-hidden {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .pagination__link--prev,
+  .pagination__link--next {
+    padding: 8px 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    margin-top: 60px;
+  }
+}

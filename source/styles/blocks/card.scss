@@ -57,3 +57,30 @@
   background-color: $base-white-color;
 }
 
+@media (min-width: $tablet-width) {
+  .card {
+    padding: 50px 30px 30px;
+  }
+
+  .card__link {
+    margin-bottom: 30px;
+  }
+
+  .card__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .card__description {
+    margin-bottom: 20px;
+    width: 289px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card__description {
+    width: 257px;
+  }
+}
+

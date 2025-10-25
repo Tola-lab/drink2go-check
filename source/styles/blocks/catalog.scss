@@ -34,3 +34,61 @@
   list-style: none;
 }
 
+@media (min-width: $tablet-width) {
+  .catalog__wrapper {
+    width: 768px;
+    padding: 80px 20px 90px;
+  }
+
+  .catalog__select {
+    justify-content: end;
+    margin-bottom: 30px;
+  }
+
+  .catalog__list {
+    flex-flow: row wrap;
+    gap: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__wrapper {
+    display: grid;
+    position: relative;
+    width: 1440px;
+    padding: 100px 40px 120px;
+
+    grid-template: "subtitle subtitle subtitle" auto "title    title    title" auto "filter   .        select" auto "filter   .        cards" 1fr ".        .        pagination" auto / 318px 30px 1fr;
+  }
+
+  .catalog__subtitle {
+    grid-area: subtitle;
+    margin-bottom: 0;
+  }
+
+  .catalog__title {
+    grid-area: title;
+    margin-bottom: 40px;
+  }
+
+  .catalog__filter {
+    grid-area: filter;
+  }
+
+  .catalog__select {
+    grid-area: select;
+    margin-bottom: 12px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-area: cards;
+    grid-template-columns: repeat(3, 317px);
+    gap: 30px;
+  }
+
+  .catalog__pagination {
+    grid-area: pagination;
+  }
+}
+

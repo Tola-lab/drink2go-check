@@ -38,3 +38,40 @@
   color: $base-white-color;
   cursor: default;
 }
+
+@media (min-width: $tablet-width) {
+  .filter {
+    gap: 40px;
+  }
+
+  .filter__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .filter__group {
+    width: 222px;
+  }
+
+  .filter__button-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .filter__button {
+    padding: 8px 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter__wrapper {
+    flex-direction: column;
+    width: 318px;
+  }
+
+  .filter__button-wrapper {
+    justify-content: flex-start;
+    width: 318px;
+  }
+}

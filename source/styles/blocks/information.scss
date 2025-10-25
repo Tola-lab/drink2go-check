@@ -19,7 +19,7 @@
 .information__link {
   font-weight: 500;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 16px;
   color: $base-black-color;
   text-transform: uppercase;
   text-decoration: none;
@@ -79,4 +79,10 @@
 
 .information__phone:active {
   color: $primary-darker-color;
+}
+
+@media (min-width: $tablet-width) {
+  .information__wrapper {
+    padding: 0;
+  }
 }

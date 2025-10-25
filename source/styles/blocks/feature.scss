@@ -1,3 +1,36 @@
+.feature__item {
+  position: relative;
+}
+
+.feature__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 52px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-size: 52px 56px;
+  transform: translateX(-50%);
+}
+
+.feature__item--speed::after {
+  background-image: url("../../icons/speed-icon.svg");
+}
+
+.feature__item--fit::after {
+  background-image: url("../../icons/fit-icon.svg");
+}
+
+.feature__item--energy::after {
+  background-image: url("../../icons/energy-icon.svg");
+}
+
+.feature__item--ecology::after {
+  background-image: url("../../icons/ecology-icon.svg");
+}
+
 .feature__title {
   margin: 0;
   margin-bottom: 4px;
@@ -10,3 +43,46 @@
   font-size: 14px;
   line-height: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .feature__item {
+    margin-bottom: 20px;
+    padding: 0 20px 0 72px;
+    width: 339px;
+    text-align: left;
+  }
+
+  .feature__item::after {
+    left: 30px;
+  }
+
+  .feature__title {
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .feature__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feature__item {
+    margin: 0;
+    padding: 0;
+    width: 317px;
+    text-align: center;
+  }
+
+  .feature__item::after {
+    left: 50%;
+  }
+
+  .feature__title {
+    padding-top: 72px;
+  }
+}
+
