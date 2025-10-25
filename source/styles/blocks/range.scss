@@ -16,6 +16,8 @@
 
 .range__bar {
   position: absolute;
+  left: 10;
+  width: 240px;
   height: 4px;
   background-color: $primary-lighter-color;
 }
@@ -104,4 +106,31 @@
 .range__input:disabled {
   color: $base-grey-color;
   border: 2px solid $light-grey-color;
+}
+
+@media (min-width: $tablet-width) {
+  .range__scale {
+    width: 223px;
+  }
+
+  .range__bar {
+    left: 0;
+    width: 192px;
+  }
+
+  .range__toggle--min {
+    left: 0;
+  }
+
+  .range__toggle--max {
+    right: -9px;
+  }
+
+  .range__value-wrapper {
+    width: 223px;
+  }
+
+  .range__input {
+    width: 88px;
+  }
 }

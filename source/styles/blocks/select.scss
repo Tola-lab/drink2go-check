@@ -41,3 +41,9 @@
   background-color: $base-secondary-color;
 }
 
+@media (min-width: $tablet-width) {
+  .select__title {
+    padding-right: 10px;
+  }
+}
+

@@ -62,3 +62,9 @@
   cursor: default;
 }
 
+@media (min-width: $tablet-width) {
+  .toggle__checkbox {
+    inset: 0 180px 0 0;
+  }
+}
+

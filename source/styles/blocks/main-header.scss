@@ -4,3 +4,16 @@
   width: 320px;
   margin: auto;
 }
+
+@media (min-width: $tablet-width) {
+  .main-header__navigation {
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header__navigation {
+    width: 1440px;
+  }
+}
+
