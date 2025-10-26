@@ -1,7 +1,7 @@
 .social {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 22px;
+  padding-bottom: 17px;
 }
 
 .social__list {
@@ -45,7 +45,7 @@
 @media (min-width: $tablet-width) {
   .social {
     justify-content: space-between;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     padding: 0;
   }
 }
@@ -53,6 +53,8 @@
 @media (min-width: $desktop-width) {
   .social {
     flex-direction: column;
+    justify-content: flex-start;
     margin: 0;
+    margin-right: 10px;
   }
 }

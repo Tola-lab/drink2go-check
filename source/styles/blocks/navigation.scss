@@ -14,23 +14,26 @@
   list-style: none;
 }
 
-.navigation__list--user {
+.navigation__user-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: flex;
   margin-left: auto;
 }
 
-.navigation__list--user .navigation__link {
+.navigation__user-list .navigation__link {
   position: relative;
   display: block;
   width: 60px;
   height: 60px;
 }
 
-.navigation__list--user .navigation__link:active {
+.navigation__user-list .navigation__link:active {
   background-color: $base-secondary-color;
 }
 
-.navigation__list--user .navigation__link::after {
+.navigation__user-list .navigation__link::after {
   content: "";
   position: absolute;
   display: block;
@@ -44,17 +47,17 @@
   background-color: $base-black-color;
 }
 
-.navigation__list--user .navigation__link--user::after {
+.navigation__user-list .navigation__link--user::after {
   mask-image: url("../../icons/user-icon.svg");
 }
 
-.navigation__list--user .navigation__link--basket::after {
+.navigation__user-list .navigation__link--basket::after {
   mask-image: url("../../icons/basket-icon.svg");
 }
 
-.navigation__list--user .navigation__link:hover::after,
-.navigation__list--user .navigation__link:focus-visible::after,
-.navigation__list--user .navigation__link:active::after {
+.navigation__user-list .navigation__link:hover::after,
+.navigation__user-list .navigation__link:focus-visible::after,
+.navigation__user-list .navigation__link:active::after {
   background-color: $base-primaty-color;
 }
 
@@ -98,19 +101,87 @@
   left: 0;
 }
 
+@media (max-width: $mobile-width) {
+  .navigation--open .navigation__list {
+    position: absolute;
+    display: block;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    background-color: $base-white-color;
+    z-index: 1;
+  }
+
+  .navigation--open .navigation__list::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    background-color: $base-secondary-color;
+  }
+
+  .navigation--open .navigation__item {
+    display: block;
+    border-bottom: 1px solid $base-secondary-color;
+  }
+
+  .navigation--open .navigation__link {
+    display: block;
+    padding: 20px 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .navigation--open .navigation__link:hover,
+  .navigation--open .navigation__link:focus-visible {
+    color: $base-primaty-color;
+  }
+
+  .navigation--open .navigation__link:active {
+    background-color: $base-secondary-color;
+  }
+
+  .navigation__toggle--close {
+    display: block;
+  }
+
+  .navigation__toggle--close > .hamburger {
+    height: 0;
+  }
+
+  .navigation__toggle--close > .hamburger::before {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+
+  .navigation__toggle--close > .hamburger::after {
+    top: 5px;
+    transform: rotate(-45deg);
+  }
+}
+
 @media (min-width: $tablet-width) {
   .navigation__logo {
-    margin-right: 67px;
+    margin-right: 46px;
     padding: 22px 20px;
   }
 
   .navigation__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 400px;
   }
 
-  .navigation__list--user {
+  .navigation__user-list {
     width: 120px;
     margin-right: 20px;
   }
@@ -138,11 +209,11 @@
     background-color: $base-secondary-color;
   }
 
-  .navigation__list--user .navigation__link {
+  .navigation__user-list .navigation__link {
     height: 80px;
   }
 
-  .navigation__list--user .navigation__link::after {
+  .navigation__user-list .navigation__link::after {
     top: 32px;
     left: 22px;
   }
@@ -173,7 +244,8 @@
     white-space: normal;
   }
 
-  .navigation__title {
+  .navigation .navigation__title {
+    margin-right: 17px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -184,21 +256,22 @@
     width: 600px;
   }
 
-  .navigation__list--user {
+  .navigation__user-list {
     width: 261px;
     margin-right: 40px;
   }
 
-  .navigation__list--user .navigation__link {
+  .navigation__user-list .navigation__link {
     width: 112px;
     padding: 32px 20px 32px 44px;
   }
 
-  .navigation__list--user .navigation__link--basket {
+  .navigation__user-list .navigation__link--basket {
     width: 129px;
+    margin-left: 21px;
   }
 
-  .navigation__list--user .navigation__link::after {
+  .navigation__user-list .navigation__link::after {
     left: 20px;
   }
 }

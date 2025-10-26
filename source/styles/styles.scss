@@ -4,6 +4,7 @@
 @import "./common/fonts.scss";
 
 /* BLOCKS */
+@import "../vendor/nouislider.min.css";
 @import "./blocks/visually-hidden";
 @import "./blocks/page";
 @import "./blocks/button";
@@ -31,4 +32,3 @@
 @import "./blocks/footer";
 @import "./blocks/social";
 @import "./blocks/information";
-

@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .catalog__list {
@@ -42,7 +42,7 @@
 
   .catalog__select {
     justify-content: end;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   .catalog__list {
@@ -58,17 +58,22 @@
     width: 1440px;
     padding: 100px 40px 120px;
 
-    grid-template: "subtitle subtitle subtitle" auto "title    title    title" auto "filter   .        select" auto "filter   .        cards" 1fr ".        .        pagination" auto / 318px 30px 1fr;
+    grid-template:
+      "subtitle subtitle subtitle" auto
+      "title title title" auto
+      "filter . select" auto
+      "filter . cards" 1fr
+      ". . pagination" auto / 318px 30px 1fr;
   }
 
   .catalog__subtitle {
     grid-area: subtitle;
-    margin-bottom: 0;
+    margin-bottom: 3px;
   }
 
   .catalog__title {
     grid-area: title;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   .catalog__filter {
@@ -77,7 +82,8 @@
 
   .catalog__select {
     grid-area: select;
-    margin-bottom: 12px;
+    margin-top: -4px;
+    margin-bottom: 27px;
   }
 
   .catalog__list {

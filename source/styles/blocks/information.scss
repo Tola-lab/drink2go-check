@@ -1,16 +1,27 @@
 .information__wrapper {
-  padding: 20px;
+  padding: 20px 20px 22px;
+}
+
+.information__wrapper--contacts {
+  padding-bottom: 16px;
 }
 
 .information__title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 20px;
   color: $base-primaty-color;
 }
 
+.information__title--contacts {
+  margin-bottom: 20px;
+}
+
 .information__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -37,7 +48,7 @@
 .information__address {
   position: relative;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   padding-left: 19px;
   font-style: normal;
   font-size: 14px;

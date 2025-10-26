@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
   <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
@@ -35,7 +34,7 @@
           <a class="navigation__link" href="#">О нас</a>
         </li>
       </ul>
-      <ul class="navigation__list navigation__list--user">
+      <ul class="navigation__user-list">
         <li class="navigation__item">
           <a class="navigation__link navigation__link--user" href="#">
             <span class="visually-hidden">Войти</span>
@@ -58,7 +57,7 @@
     <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Drink2Go — интернет-магазин по продаже кофейных напитков.</h1>
       <div class="hero__slider slider">
-        <div class="slider__content-wrapper">
+        <div class="slider__content-wrapper slider__content-wrapper--decaf slider__content-wrapper--active">
           <button class="slider__button slider-button-prev" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
@@ -85,6 +84,63 @@
             </div>
           </div>
         </div>
+
+        <div class="slider__content-wrapper slider__content-wrapper--lavender">
+          <button class="slider__button slider-button-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider__button slider-button-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+          <picture>
+            <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-slider-desktop@1x.webp 1x, images/lavender-slider-desktop@2x.webp 2x">
+            <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/lavender-slider-tablet@1x.webp 1x, images/lavender-slider-tablet@2x.webp 2x">
+            <source width="280" height="280" type="image/webp" srcset="images/lavender-slider-mobile@1x.webp 1x, images/lavender-slider-mobile@2x.webp 2x">
+
+            <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/lavender-slider-desktop@1x.png, images/lavender-slider-desktop@2x.png 2x">
+            <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/lavender-slider-tablet@1x.png, images/lavender-slider-tablet@2x.png 2x">
+            <img class="slider__img" src="images/lavender-slider-mobile@1x.png" srcset="images/lavender-slider-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
+          </picture>
+          <div class="slider__text-wrapper">
+            <p class="slider__subtitle subtitle">Новинка!</p>
+            <h2 class="slider__title">Лавандовый Латте</h2>
+            <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="slider__buy buy">
+              <span class="buy__price-old"><del>285₽</del></span>
+              <p class="buy__price">265₽</p>
+              <a class="buy__button button" href="#">Заказать</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__content-wrapper slider__content-wrapper--espresso">
+          <button class="slider__button slider-button-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider__button slider-button-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+          <picture>
+            <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-slider-desktop@1x.webp 1x, images/espresso-slider-desktop@2x.webp 2x">
+            <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/espresso-slider-tablet@1x.webp 1x, images/espresso-slider-tablet@2x.webp 2x">
+            <source width="280" height="280" type="image/webp" srcset="images/espresso-slider-mobile@1x.webp 1x, images/espresso-slider-mobile@2x.webp 2x">
+
+            <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/espresso-slider-desktop@1x.png, images/espresso-slider-desktop@2x.png 2x">
+            <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/espresso-slider-tablet@1x.png, images/espresso-slider-tablet@2x.png 2x">
+            <img class="slider__img" src="images/espresso-slider-mobile@1x.png" srcset="images/espresso-slider-mobile@2x.png 2x" width="280" height="280" alt="Декаф Флэт Уайт">
+          </picture>
+          <div class="slider__text-wrapper">
+            <p class="slider__subtitle subtitle">Новинка!</p>
+            <h2 class="slider__title">Тройной Эспрессо</h2>
+            <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="slider__buy buy">
+              <span class="buy__price-old"><del>395₽</del></span>
+              <p class="buy__price">375₽</p>
+              <a class="buy__button button" href="#">Заказать</a>
+            </div>
+          </div>
+        </div>
+
         <ul class="slider__pagination slider-pagination">
           <li class="slider-pagination__item">
             <a class="slider-pagination__link slider-pagination__link--active" href="#"><span class="visually-hidden">1 слайд</span></a>
@@ -128,29 +184,24 @@
       <div class="catalog__wrapper">
         <p class="catalog__subtitle subtitle">Каталог</p>
         <h2 class="catalog__title title">Каталог кофейных напитков</h2>
+
         <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter__wrapper">
+
             <fieldset class="filter__group range">
               <legend class="range__title">Цена</legend>
               <div class="range__wrapper">
                 <div class="range__scale">
-                  <div class="range__bar">
-                    <button class="range__toggle range__toggle--min" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену</span>
-                    </button>
-                    <button class="range__toggle range__toggle--max" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену</span>
-                    </button>
-                  </div>
+                  <div class="range__slider" id="range-slider"></div>
                 </div>
-              </div>
-              <div class="range__value-wrapper">
-                <label class="range__label">
-                  <input class="range__input" type="number" name="min-price" placeholder="0" required>
-                </label>
-                <label class="range__label">
-                  <input class="range__input" type="number" value="900" name="max-price" required>
-                </label>
+                <div class="range__inputs">
+                  <label class="range__label" for="range-min">
+                    <input class="range__input range__input--min" type="number" id="range-min" name="range-min" placeholder="0">
+                  </label>
+                  <label class="range__label" for="range-max">
+                    <input class="range__input range__input--max" type="number" id="range-max" name="range-max" value="900">
+                  </label>
+                </div>
               </div>
             </fieldset>
 
@@ -255,7 +306,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -268,7 +322,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -281,7 +338,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -294,7 +354,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -307,7 +370,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -320,7 +386,10 @@
               <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
               <div class="card__buy-wrapper">
                 <span class="card__price">225₽</span>
-                <a class="card__button button" href="#">В корзину</a>
+                <a class="card__button button" href="#">
+                  В корзину
+                  <span aria-hidden="true"></span>
+                </a>
               </div>
             </div>
           </li>
@@ -431,8 +500,8 @@
           </div>
         </div>
         <div class="footer__information information">
-          <div class="information__wrapper">
-            <h4 class="information__title">Контакты</h4>
+          <div class="information__wrapper information__wrapper--contacts">
+            <h4 class="information__title information__title--contacts">Контакты</h4>
             <address>
               <p class="information__address">Санкт-Петербург, набережная реки Карповки, дом 5</p>
               <a class="information__phone" href="tel:89999999999">+7 (999) 999-99-99</a>
@@ -445,6 +514,9 @@
       </a>
     </div>
   </footer>
+
+  <script src="./scripts/main.js" type="module"></script>
+  <script src="./vendor/nouislider.min.js"></script>
 </body>
 
 </html>

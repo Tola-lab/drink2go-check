@@ -90,10 +90,10 @@
   }
 
   .footer__copyright {
-    margin-top: 30px;
+    margin-top: 32px;
     padding: 0;
     text-align: center;
-    transform: translateX(-5px);
+    transform: translateX(-8px);
   }
 
   .footer__copyright::after {
@@ -106,7 +106,7 @@
   .footer__wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     padding: 40px;
     width: 1440px;
   }
@@ -131,6 +131,10 @@
     padding-right: 29px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .footer__list {
+    padding-top: 10px;
   }
 
   .footer__information {
