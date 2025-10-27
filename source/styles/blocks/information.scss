@@ -1,9 +1,9 @@
 .information__wrapper {
   padding: 20px 20px 22px;
-}
 
-.information__wrapper--contacts {
-  padding-bottom: 16px;
+  &--contacts {
+    padding-bottom: 16px;
+  }
 }
 
 .information__title {
@@ -12,10 +12,10 @@
   font-size: 14px;
   line-height: 20px;
   color: $base-primaty-color;
-}
 
-.information__title--contacts {
-  margin-bottom: 20px;
+  &--contacts {
+    margin-bottom: 20px;
+  }
 }
 
 .information__list {
@@ -34,15 +34,15 @@
   color: $base-black-color;
   text-transform: uppercase;
   text-decoration: none;
-}
 
-.information__link:hover,
-.information__link:focus-visible {
-  color: $primary-lighter-color;
-}
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter-color;
+  }
 
-.information__link:active {
-  color: $primary-darker-color;
+  &:active {
+    color: $primary-darker-color;
+  }
 }
 
 .information__address {
@@ -53,6 +53,17 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/address-icon.svg");
+  }
 }
 
 .information__phone {
@@ -64,32 +75,26 @@
   line-height: 20px;
   color: $base-black-color;
   text-decoration: none;
-}
 
-.information__address::after,
-.information__phone::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 2px;
-  left: 0;
-  width: 13px;
-  height: 16px;
-  background-image: url("../../icons/address-icon.svg");
-}
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/phone-icon.svg");
+  }
 
-.information__phone::after {
-  top: 0;
-  background-image: url("../../icons/phone-icon.svg");
-}
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter-color;
+  }
 
-.information__phone:hover,
-.information__phone:focus-visible {
-  color: $primary-lighter-color;
-}
-
-.information__phone:active {
-  color: $primary-darker-color;
+  &:active {
+    color: $primary-darker-color;
+  }
 }
 
 @media (min-width: $tablet-width) {

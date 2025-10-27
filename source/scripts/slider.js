@@ -65,4 +65,3 @@ paginationButtons.forEach((button, index) => {
 });
 
 export {updateSlider};
-

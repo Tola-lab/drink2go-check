@@ -39,4 +39,3 @@ const changeRangeSlider = () => {
 };
 
 export {changeRangeSlider};
-

@@ -1,10 +1,10 @@
 .navigation__logo {
   display: block;
   padding: 12px 20px;
-}
 
-.navigation__logo:hover {
-  opacity: 0.8;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .navigation__list {
@@ -27,24 +27,30 @@
   display: block;
   width: 60px;
   height: 60px;
-}
 
-.navigation__user-list .navigation__link:active {
-  background-color: $base-secondary-color;
-}
+  &:active {
+    background-color: $base-secondary-color;
+  }
 
-.navigation__user-list .navigation__link::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 22px;
-  left: 22px;
-  width: 16px;
-  height: 16px;
-  mask-size: 16px 16px;
-  mask-repeat: no-repeat;
-  mask-position: center;
-  background-color: $base-black-color;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 22px;
+    left: 22px;
+    width: 16px;
+    height: 16px;
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $base-black-color;
+  }
+
+  &:hover::after,
+  &:focus-visible::after,
+  &:active::after {
+    background-color: $base-primaty-color;
+  }
 }
 
 .navigation__user-list .navigation__link--user::after {
@@ -55,12 +61,6 @@
   mask-image: url("../../icons/basket-icon.svg");
 }
 
-.navigation__user-list .navigation__link:hover::after,
-.navigation__user-list .navigation__link:focus-visible::after,
-.navigation__user-list .navigation__link:active::after {
-  background-color: $base-primaty-color;
-}
-
 .navigation__toggle {
   position: relative;
   display: block;
@@ -69,36 +69,39 @@
   background-color: $base-white-color;
   border: none;
   cursor: pointer;
-}
 
-.navigation__toggle:active {
-  background-color: $base-secondary-color;
-}
+  &:active {
+    background-color: $base-secondary-color;
+  }
 
-.navigation__toggle > .hamburger,
-.navigation__toggle > .hamburger::before,
-.navigation__toggle > .hamburger::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 22px;
-  right: 22px;
-  width: 16px;
-  height: 2px;
-  background-color: $base-black-color;
-  transition: all 0.2s;
-}
+  > .hamburger {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 16px;
+    height: 2px;
+    background-color: $base-black-color;
+    transition: all 0.2s;
 
-.navigation__toggle > .hamburger::before {
-  content: "";
-  top: 6px;
-  left: 0;
-}
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 2px;
+      background-color: $base-black-color;
+      transition: all 0.2s;
+    }
 
-.navigation__toggle > .hamburger::after {
-  content: "";
-  top: 12px;
-  left: 0;
+    &::before {
+      top: 6px;
+    }
+
+    &::after {
+      top: 12px;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -110,17 +113,17 @@
     left: 0;
     background-color: $base-white-color;
     z-index: 1;
-  }
 
-  .navigation--open .navigation__list::after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 1px;
-    top: 0;
-    left: 0;
-    background-color: $base-secondary-color;
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      background-color: $base-secondary-color;
+    }
   }
 
   .navigation--open .navigation__item {
@@ -138,15 +141,15 @@
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-  }
 
-  .navigation--open .navigation__link:hover,
-  .navigation--open .navigation__link:focus-visible {
-    color: $base-primaty-color;
-  }
+    &:hover,
+    &:focus-visible {
+      color: $base-primaty-color;
+    }
 
-  .navigation--open .navigation__link:active {
-    background-color: $base-secondary-color;
+    &:active {
+      background-color: $base-secondary-color;
+    }
   }
 
   .navigation__toggle--close {
@@ -155,16 +158,16 @@
 
   .navigation__toggle--close > .hamburger {
     height: 0;
-  }
 
-  .navigation__toggle--close > .hamburger::before {
-    top: 5px;
-    transform: rotate(45deg);
-  }
+    &::before {
+      top: 5px;
+      transform: rotate(45deg);
+    }
 
-  .navigation__toggle--close > .hamburger::after {
-    top: 5px;
-    transform: rotate(-45deg);
+    &::after {
+      top: 5px;
+      transform: rotate(-45deg);
+    }
   }
 }
 
@@ -198,24 +201,24 @@
     text-decoration: none;
     text-transform: uppercase;
     outline: none;
-  }
 
-  .navigation__link:hover,
-  .navigation__link:focus-visible {
-    color: $base-primaty-color;
-  }
+    &:hover,
+    &:focus-visible {
+      color: $base-primaty-color;
+    }
 
-  .navigation__link:active {
-    background-color: $base-secondary-color;
+    &:active {
+      background-color: $base-secondary-color;
+    }
   }
 
   .navigation__user-list .navigation__link {
     height: 80px;
-  }
 
-  .navigation__user-list .navigation__link::after {
-    top: 32px;
-    left: 22px;
+    &::after {
+      top: 32px;
+      left: 22px;
+    }
   }
 
   .navigation__item--current .navigation__link {
@@ -264,14 +267,14 @@
   .navigation__user-list .navigation__link {
     width: 112px;
     padding: 32px 20px 32px 44px;
+
+    &::after {
+      left: 20px;
+    }
   }
 
   .navigation__user-list .navigation__link--basket {
     width: 129px;
     margin-left: 21px;
-  }
-
-  .navigation__user-list .navigation__link::after {
-    left: 20px;
   }
 }

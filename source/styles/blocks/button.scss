@@ -10,17 +10,17 @@
   text-decoration: none;
   cursor: pointer;
   outline: none;
-}
 
-.button:hover,
-.button:focus-visible {
-  background-color: $primary-lighter-color;
-}
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter-color;
+  }
 
-.button:active {
-  background-color: $primary-darker-color;
-}
+  &:active {
+    background-color: $primary-darker-color;
+  }
 
-.button:disabled {
-  background-color: $base-grey-color;
+  &:disabled {
+    background-color: $base-grey-color;
+  }
 }

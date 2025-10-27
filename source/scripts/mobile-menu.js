@@ -9,5 +9,3 @@ const toggleMenu = () => {
 };
 
 export {toggleMenu};
-
-

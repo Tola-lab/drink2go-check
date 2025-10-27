@@ -22,24 +22,24 @@
   mask-position: center;
   background-color: $base-grey-color;
   cursor: pointer;
-}
 
-.social__link--vk {
-  mask-image: url("../../icons/vk-icon.svg");
-}
+  &--vk {
+    mask-image: url("../../icons/vk-icon.svg");
+  }
 
-.social__link--pinterest {
-  mask-image: url("../../icons/pinterest-icon.svg");
-}
+  &--pinterest {
+    mask-image: url("../../icons/pinterest-icon.svg");
+  }
 
-.social__link--ok {
-  mask-image: url("../../icons/ok-icon.svg");
-}
+  &--ok {
+    mask-image: url("../../icons/ok-icon.svg");
+  }
 
-.social__link:hover,
-.social__link:active,
-.social__link:focus-visible {
-  background-color: $base-primaty-color;
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color: $base-primaty-color;
+  }
 }
 
 @media (min-width: $tablet-width) {

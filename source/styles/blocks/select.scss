@@ -1,18 +1,18 @@
 .select__wrapper {
   position: relative;
-}
 
-.select__wrapper::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 12px;
-  right: 7px;
-  width: 10px;
-  height: 10px;
-  background-image: url("../../icons/arrow-icon.svg");
-  background-repeat: no-repeat;
-  transform: rotate(90deg);
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 12px;
+    right: 7px;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../icons/arrow-icon.svg");
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+  }
 }
 
 .select__title {
@@ -35,16 +35,18 @@
   background-color: inherit;
   cursor: pointer;
   outline: none;
-}
 
-.select__control:hover,
-.select__control:focus-visible {
-  background-color: $base-secondary-color;
+  &:hover,
+  &:focus-visible {
+    background-color: $base-secondary-color;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .select__wrapper::after {
-    right: 10px;
+  .select__wrapper {
+    &::after {
+      right: 10px;
+    }
   }
 
   .select__title {
@@ -55,4 +57,3 @@
     padding: 0;
   }
 }
-

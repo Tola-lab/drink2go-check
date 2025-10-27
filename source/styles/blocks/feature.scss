@@ -1,34 +1,34 @@
 .feature__item {
   position: relative;
-}
 
-.feature__item::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 52px;
-  height: 56px;
-  background-repeat: no-repeat;
-  background-size: 52px 56px;
-  transform: translateX(-50%);
-}
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-size: 52px 56px;
+    transform: translateX(-50%);
+  }
 
-.feature__item--speed::after {
-  background-image: url("../../icons/speed-icon.svg");
-}
+  &--speed::after {
+    background-image: url("../../icons/speed-icon.svg");
+  }
 
-.feature__item--fit::after {
-  background-image: url("../../icons/fit-icon.svg");
-}
+  &--fit::after {
+    background-image: url("../../icons/fit-icon.svg");
+  }
 
-.feature__item--energy::after {
-  background-image: url("../../icons/energy-icon.svg");
-}
+  &--energy::after {
+    background-image: url("../../icons/energy-icon.svg");
+  }
 
-.feature__item--ecology::after {
-  background-image: url("../../icons/ecology-icon.svg");
+  &--ecology::after {
+    background-image: url("../../icons/ecology-icon.svg");
+  }
 }
 
 .feature__title {
@@ -50,11 +50,11 @@
     padding-left: 80px;
     width: 339px;
     text-align: left;
-  }
 
-  .feature__item::after {
-    top: 2px;
-    left: 36px;
+    &::after {
+      top: 2px;
+      left: 36px;
+    }
   }
 
   .feature__title {
@@ -76,15 +76,14 @@
     padding: 0;
     width: 317px;
     text-align: center;
-  }
 
-  .feature__item::after {
-    top: -2px;
-    left: 50%;
+    &::after {
+      top: -2px;
+      left: 50%;
+    }
   }
 
   .feature__title {
     padding-top: 72px;
   }
 }
-

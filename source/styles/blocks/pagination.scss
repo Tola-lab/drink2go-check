@@ -22,56 +22,56 @@
   background-color: $base-white-color;
   border-radius: 4px;
   outline: none;
-}
 
-.pagination__link--prev::after,
-.pagination__link--next::after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 15px;
-  left: 15px;
-  width: 10px;
-  height: 10px;
-  mask-image: url("../../icons/arrow-icon.svg");
-  mask-size: 10px 10px;
-  mask-repeat: no-repeat;
-  background-color: $base-primaty-color;
-}
+  &:hover,
+  &:focus-visible {
+    color: $base-white-color;
+    background-color: $primary-lighter-color;
+  }
 
-.pagination__link--prev::after {
-  transform: rotate(180deg);
-}
+  &:active {
+    background-color: $primary-darker-color;
+  }
 
-.pagination__link--prev:hover::after,
-.pagination__link--next:hover::after,
-.pagination__link--prev:focus-visible::after,
-.pagination__link--next:focus-visible::after {
-  background-color: $base-white-color;
-}
+  &--active {
+    font-weight: 600;
+    color: $base-black-color;
+    background-color: inherit;
+    cursor: default;
 
-.pagination__link:hover,
-.pagination__link:focus-visible {
-  color: $base-white-color;
-  background-color: $primary-lighter-color;
-}
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: $base-black-color;
+      background-color: inherit;
+    }
+  }
 
-.pagination__link:active {
-  background-color: $primary-darker-color;
-}
+  &--prev,
+  &--next {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: 15px;
+      width: 10px;
+      height: 10px;
+      mask-image: url("../../icons/arrow-icon.svg");
+      mask-size: 10px 10px;
+      mask-repeat: no-repeat;
+      background-color: $base-primaty-color;
+    }
 
-.pagination__link--active {
-  font-weight: 600;
-  color: $base-black-color;
-  background-color: inherit;
-  cursor: default;
-}
+    &:hover::after,
+    &:focus-visible::after {
+      background-color: $base-white-color;
+    }
+  }
 
-.pagination__link--active:hover,
-.pagination__link--active:focus-visible,
-.pagination__link--active:active {
-  color: $base-black-color;
-  background-color: inherit;
+  &--prev::after {
+    transform: rotate(180deg);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -80,23 +80,25 @@
     margin-top: 70px;
   }
 
-  .pagination__link::after {
-    content: none;
-  }
+  .pagination__link {
+    &::after {
+      content: none;
+    }
 
-  .pagination__link .visually-hidden {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    clip: auto;
-    overflow: visible;
-    white-space: normal;
-  }
+    .visually-hidden {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+      white-space: normal;
+    }
 
-  .pagination__link--prev,
-  .pagination__link--next {
-    padding: 8px 20px;
+    &--prev,
+    &--next {
+      padding: 8px 20px;
+    }
   }
 }
 

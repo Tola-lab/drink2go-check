@@ -5,5 +5,3 @@ import { updateSlider } from './slider.js';
 toggleMenu();
 updateSlider();
 changeRangeSlider();
-
-
